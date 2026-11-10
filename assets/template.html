@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>@@TITLE@@</title><style>@@STYLE@@</style></head>
+<body>
+<header><div class="eyebrow">PHYSICS / 看见物理过程</div><h1 id="title">@@TITLE@@</h1><p id="subtitle"></p><div id="source" class="source"></div></header>
+<main>
+  <section class="workspace">
+    <div class="scene-panel card">
+      <div class="scene-head"><span id="phase" class="badge">准备开始</span><span id="clock">t = 0 s</span></div>
+      <div id="viewport" aria-label="三维物理场景：拖动旋转，滚轮缩放，右键平移"><div id="render-error" role="alert" hidden></div></div>
+      <div class="view-tools"><span>视角</span><button data-view="front">正视</button><button data-view="oblique">立体</button><button data-view="side">侧视</button><button data-view="top">俯视</button><button id="view-reset">复位</button><fieldset id="vector-options" aria-label="选择显示的矢量"></fieldset><fieldset id="label-options" aria-label="选择显示的标注"></fieldset></div>
+      <p class="hint" id="scene-note"></p>
+      <div class="transport"><button id="play" class="primary">播放</button><button id="restart">回到起点</button><label>速度 <select id="speed"><option value="0.1">0.1×</option><option value="0.25">0.25×</option><option value="0.5" selected>0.5×</option><option value="1">1×</option><option value="2">2×</option></select></label><label><input type="checkbox" id="guided"> 关键时刻暂停</label></div>
+      <input id="timeline" type="range" min="0" max="1" step="0.00001" value="0" aria-label="物理时间线">
+      <div id="events" class="events"></div>
+      <div class="event-tools"><button id="before-event">关键时刻前一瞬</button><button id="after-event">关键时刻后一瞬</button><label><input type="checkbox" id="auto-slow" checked> 关键过程自动慢放</label><span id="effective-speed"></span></div>
+    </div>
+    <aside class="card controls"><div class="section-title"><h2>改变条件</h2><button id="reset">恢复原题</button></div><p id="mode-note" class="small-note"></p><div id="presets" class="presets"></div><div id="parameters"></div><p id="input-error" role="alert"></p><h3>由模型算出的结果</h3><div id="results" class="results"></div></aside>
+  </section>
+  <section class="explanation card"><div><div class="eyebrow">此刻发生了什么</div><h2 id="explanation-title"></h2><p id="explanation-text"></p><div id="equation" class="equation"></div></div><div id="values" class="values"></div></section>
+  <section id="plots" class="plots"></section>
+  <section class="card reading"><details open><summary>先理解模型，再对照解题</summary><div id="model-reading"></div></details><details><summary>原题各小问的完整推导</summary><div id="solution"></div></details><details><summary>演示假设与使用边界</summary><div id="limitations"></div></details></section>
+</main><footer>本地离线交互 · 拖动时间是在回看同一模型 · 旋转视角不改变物理过程</footer>
+<!-- Three.js r180 + TrackballControls. @@LICENSE@@ -->
+@@SCRIPTS@@
+</body></html>

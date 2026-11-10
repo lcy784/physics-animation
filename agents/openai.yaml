@@ -1,0 +1,4 @@
+interface:
+  display_name: "physics-animation"
+  short_description: "核验物理关系，生成可折叠工作台、阶段时间线和暂停批注动画"
+  default_prompt: "使用 $physics-animation 理解我提供的物理题，先给出物理过程与规律到视觉的映射，再制作可交互 HTML 动画，验收关键机制、物理正确性与实际运行。"
